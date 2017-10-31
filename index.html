@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Анкета учасника акції.</title>
+</head>
+<body>
+    <h1>Анкета - особисті дані учасника акції:</h1>
+    <form method="post" action="https://formspree.io/lytsarp@gmail.com">
+        <div>
+            <fieldset>
+                <legend>Знайомство:</legend>
+                    Ваше П.І.Б.<br>
+                    <label>
+                        <input type="text" name="імя" required placeholder="Ім'я">
+                    </label>
+                    <label>
+                        <input type="text" name="прізвище" required placeholder="Прізвище">
+                    </label>
+                    <label>
+                        <input type="text" name="по-батькові" placeholder="По-батькові">
+                    </label>
+                    <br>
+                    Стать:
+                    <input type="radio" name="gender" value="чоловік"> Чол.
+                    <input type="radio" name="gender" value="жінка"> Жін.
+                    <input type="radio" name="gender" value="інша" checked> Інша 
+            </fieldset>
+            <fieldset>
+                <legend>Персональна інформація:</legend>
+                    <label>Паспортні дані:
+                        <input type="text" name="паспортні-дані" required pattern="[A-Z]{2}[\d]{6}" placeholder="АВ121212" title="АВ121212">
+                    </label>
+                    <br>
+                    <label>Пароль:
+                        <input type="password" name="пароль">
+                    </label>
+                    <br>
+                    <label>Погоджуюсь з правилами конфеденційності:
+                        <input type="checkbox">
+                    </label>
+            </fieldset>
+            <fieldset>
+                <legend>Додаткова інформація:</legend>
+                    <label>Лимон чи апельсина:
+                        <input required minlength="5" maxlength="9">
+                    </label>
+                    <br>
+                    <label>Ваш вік?
+                        <input type="number" name="вік" value="1" min="1" max="99">
+                    </label>
+                    <br>
+                    <label>Оберіть стихію:
+                        <select name="стихія">
+                            <option value="вода">Вода</option>
+                            <option value="повітря">Повітря</option>
+                            <option value="земля">Земля</option>
+                            <option value="вогонь">Вогонь</option>
+                        </select>
+                    </label>
+            </fieldset>
+        </div>
+        <div>
+            <br>
+            <input type="submit" value="Відправити">
+        </div>
+    </form>
+</body>
+</html>
